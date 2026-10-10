@@ -1,16 +1,16 @@
 # Rime schema settings
 # encoding: utf-8
-# 基于点儿词库2026春 091五笔方案
+# 基于点儿词库2026夏 091五笔方案
 
 schema:
   schema_id: wubi091
   name: "091五笔"
-  version: "2026.spring"
+  version: "2026.summer"
   author:
     - 编码方案始创者 行走的风景
     - 词库作者 晓览（点儿词库）
   description: |
-    基于点儿词库2026春
+    基于点儿词库2026夏
     敲 ` 键进入拼音反查
     包含 z 词条（特殊符号/emoji）
   dependencies:
