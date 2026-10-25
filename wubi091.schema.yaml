@@ -12,6 +12,7 @@ schema:
   description: |
     基于点儿词库2026夏
     敲 ` 键进入拼音反查
+    ; 选第 2 个候选，' 选第 3 个候选
     包含 z 词条（特殊符号/emoji）
   dependencies:
     - pinyin_simp
@@ -53,7 +54,8 @@ history:
   initial_quality: 10000
 
 speller:
-  delimiter: " ;'"
+  # ; 和 ' 留给选词，分隔符只用空格
+  delimiter: " "
   max_code_length: 4
   auto_select: true
   auto_select_unique_candidate: true
@@ -86,6 +88,10 @@ punctuator:
 
 key_binder:
   import_preset: default
+  # 有候选时 ; 上屏第 2 个、' 上屏第 3 个
+  bindings/+:
+    - { when: has_menu, accept: semicolon, send: 2 }
+    - { when: has_menu, accept: apostrophe, send: 3 }
 
 recognizer:
   import_preset: default
